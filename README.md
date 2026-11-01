@@ -28,11 +28,9 @@ The raw result files are in `results/`.
 ## Repository contents
 
 ```
-da_transqa_v5_confirm.py      main experiment: 10 content-disjoint iterations (produces the reported results)
-da_transqa_ablation_fast.py   ablations without the transformer (feature groups, expert routing, ensemble)
+da_transqa_confirm_v5.py      main experiment: 10 content-disjoint iterations (produces the reported results)
 measure_runtime_v5.py         inference time per video for every component (no retraining)
 make_plots_rfavqa_v2.py       figures from the saved result files (no retraining)
-results/                      result CSVs of the confirmation run and the runtime measurement
 plots/                        figures used in the report
 requirements.txt              Python dependencies
 ```
@@ -86,16 +84,13 @@ python da_transqa_v5_confirm.py
 Frames, handcrafted features and backbone features are extracted once and cached in `~/.avqa_cache`;
 later runs reuse the cache. The full run writes:
 
-- `da_transqa_results_v5_confirm_seed1000.csv` – metrics per iteration and predictor
-- `da_transqa_per_distortion_within_v5_confirm_seed1000.csv` – per-distortion metrics within each test split
-- `da_transqa_per_distortion_pooled_v5_confirm_seed1000.csv` – per-distortion metrics pooled per round
+
 
 Optional, after the full run (both reuse the caches):
 
 ```bash
 python measure_runtime_v5.py            # -> runtime_v5_confirm_seed1000.csv
 python make_plots_rfavqa_v2.py results  # -> results/plots/*.pdf and *.png
-python da_transqa_ablation_fast.py      # ablation tables (results pending in the report)
 ```
 
 ## 4. Protocol and reproducibility
