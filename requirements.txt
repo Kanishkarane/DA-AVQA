@@ -1,0 +1,12 @@
+# Python 3.9. Versions used for the reported results.
+# Replace the unpinned lines with the exact versions from your environment:
+#   pip freeze | grep -i -E "numpy|pandas|opencv|scipy|scikit-learn|openpyxl|matplotlib"
+tensorflow==2.18.0
+tensorflow-metal==1.2.0 ; sys_platform == "darwin" and platform_machine == "arm64"
+numpy
+pandas
+opencv-python
+scipy
+scikit-learn
+openpyxl
+matplotlib
