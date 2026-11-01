@@ -29,8 +29,8 @@ The raw result files are in `results/`.
 
 ```
 da_transqa_confirm_v5.py      main experiment: 10 content-disjoint iterations (produces the reported results)
-measure_runtime_v5.py         inference time per video for every component (no retraining)
-make_plots_rfavqa_v2.py       figures from the saved result files (no retraining)
+measure_runtime.py         inference time per video for every component (no retraining)
+make_plots_v2.py       figures from the saved result files (no retraining)
 plots/                        figures used in the report
 requirements.txt              Python dependencies
 ```
